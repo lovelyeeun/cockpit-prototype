@@ -5,7 +5,6 @@ import { useCallback } from "react";
 import { ChevronLeft, TrendingDown, Users } from "lucide-react";
 import { folders } from "@/data/folders";
 import { products } from "@/data/products";
-import { currentUser } from "@/data/users";
 import type { Product } from "@/lib/types";
 import { useRightPanel } from "@/lib/right-panel-context";
 import ProductCard from "@/components/commerce/ProductCard";
@@ -42,8 +41,6 @@ export default function FolderDetailPage() {
         .map((id) => products.find((p) => p.id === id))
         .filter((p): p is Product => !!p)
     : [];
-
-  const canDirectPurchase = currentUser.permissions.canPurchase;
 
   /* ── Cart (local to this page for simplicity) ── */
 
@@ -124,15 +121,6 @@ export default function FolderDetailPage() {
                   </div>
                 )}
 
-                {/* Direct purchase link */}
-                {canDirectPurchase && (
-                  <button
-                    onClick={() => router.push("/chat")}
-                    className="mt-2 text-[12px] text-[#4e4e4e] underline underline-offset-2 cursor-pointer hover:text-[#000] text-left px-1"
-                  >
-                    채팅으로 직접 구매 →
-                  </button>
-                )}
               </div>
             );
           })}
