@@ -1,8 +1,7 @@
 "use client";
 
 import {
-  User, CreditCard, Link2, Building2, Users, Brain, MapPin,
-  Wallet, FileText, PieChart, Package, AppWindow, Bell,
+  User, PieChart, Link2, Sparkles, LayoutDashboard, Package, AppWindow, Bell,
 } from "lucide-react";
 import { useSettings, type SettingsSection } from "@/lib/settings-context";
 
@@ -21,20 +20,10 @@ const groups: NavGroup[] = [
     ],
   },
   {
-    label: "회사 설정",
+    label: "회사 · 회계",
     items: [
-      { id: "company-info", label: "우리회사 정보", icon: Building2 },
-      { id: "company-team", label: "팀원 관리", icon: Users },
-      { id: "company-knowledge", label: "회사 지식 추가", icon: Brain },
-      { id: "company-shipping", label: "배송지 관리", icon: MapPin },
-    ],
-  },
-  {
-    label: "회계규칙",
-    items: [
-      { id: "accounting-payment", label: "결제수단 등록", icon: CreditCard },
-      { id: "accounting-description", label: "적요설정", icon: FileText },
-      { id: "accounting-budget", label: "예산 설정", icon: Wallet },
+      { id: "ai-settings", label: "AI로 설정하기", icon: Sparkles },
+      { id: "settings-dashboard", label: "설정 모아보기", icon: LayoutDashboard },
     ],
   },
   {

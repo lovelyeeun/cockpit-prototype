@@ -6,13 +6,8 @@ import SettingsNav from "./SettingsNav";
 import PersonalGeneral from "./panels/PersonalGeneral";
 import PersonalPlan from "./panels/PersonalPlan";
 import PersonalConnectors from "./panels/PersonalConnectors";
-import CompanyInfo from "./panels/CompanyInfo";
-import CompanyTeam from "./panels/CompanyTeam";
-import CompanyKnowledge from "./panels/CompanyKnowledge";
-import CompanyShipping from "./panels/CompanyShipping";
-import AccountingPayment from "./panels/AccountingPayment";
-import AccountingDescription from "./panels/AccountingDescription";
-import AccountingBudget from "./panels/AccountingBudget";
+import SettingsAIChat from "./panels/SettingsAIChat";
+import SettingsDashboard from "./panels/SettingsDashboard";
 import ProductsManagement from "./panels/ProductsManagement";
 import AppsManagement from "./panels/AppsManagement";
 import NotificationsSettings from "./panels/NotificationsSettings";
@@ -26,13 +21,8 @@ export default function SettingsOverlay() {
     "personal-general": <PersonalGeneral />,
     "personal-plan": <PersonalPlan />,
     "personal-connectors": <PersonalConnectors />,
-    "company-info": <CompanyInfo />,
-    "company-team": <CompanyTeam />,
-    "company-knowledge": <CompanyKnowledge />,
-    "company-shipping": <CompanyShipping />,
-    "accounting-payment": <AccountingPayment />,
-    "accounting-description": <AccountingDescription />,
-    "accounting-budget": <AccountingBudget />,
+    "ai-settings": <SettingsAIChat />,
+    "settings-dashboard": <SettingsDashboard />,
     "products": <ProductsManagement />,
     "apps": <AppsManagement />,
     "notifications": <NotificationsSettings />,

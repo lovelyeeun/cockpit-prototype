@@ -13,6 +13,7 @@ export interface Product {
   description: string;
   specs: Record<string, string>;
   inStock: boolean;
+  purchaseFrequency?: "weekly" | "biweekly" | "monthly";
 }
 
 export type ProductCategory =

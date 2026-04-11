@@ -11,6 +11,7 @@ export const products: Product[] = [
     description: "고백색도 A4 복사용지. 양면 인쇄에 적합하며 잉크젯·레이저 프린터 모두 호환.",
     specs: { "규격": "A4 (210×297mm)", "평량": "80g/m²", "매수": "500매/팩", "백색도": "163% CIE" },
     inStock: true,
+    purchaseFrequency: "monthly",
   },
   {
     id: "prod-002",
@@ -22,6 +23,7 @@ export const products: Product[] = [
     description: "HP 컬러 레이저젯 Pro M255/MFP M283 시리즈용 정품 검정 토너 카트리지.",
     specs: { "호환기종": "M255dw, M283fdw", "인쇄매수": "약 1,350매", "색상": "검정", "타입": "정품" },
     inStock: true,
+    purchaseFrequency: "biweekly",
   },
   {
     id: "prod-003",
@@ -66,6 +68,7 @@ export const products: Product[] = [
     description: "삼각 그립 수성 파인라이너 세트. 0.3mm 팁, 드라이세이프 기술 적용.",
     specs: { "팁사이즈": "0.3mm", "색상수": "20색", "잉크": "수성", "특징": "드라이세이프 48시간" },
     inStock: true,
+    purchaseFrequency: "monthly",
   },
   {
     id: "prod-007",
@@ -77,6 +80,7 @@ export const products: Product[] = [
     description: "강한 점착력의 포스트잇. 다양한 표면에 안정적으로 부착.",
     specs: { "사이즈": "76×76mm", "매수": "90매×5팩", "접착력": "강한점착", "색상": "네온 5색" },
     inStock: true,
+    purchaseFrequency: "weekly",
   },
   {
     id: "prod-008",
@@ -99,6 +103,7 @@ export const products: Product[] = [
     description: "직수형 냉온정수기. 렌탈 상품. 월 렌탈료 기준.",
     specs: { "타입": "직수형", "온도": "냉·온·정수", "필터": "RO 멤브레인", "월렌탈": "38,900원" },
     inStock: true,
+    purchaseFrequency: "monthly",
   },
   {
     id: "prod-010",
