@@ -7,7 +7,7 @@ import { useSidebar } from "@/lib/sidebar-context";
 import { useRightPanel } from "@/lib/right-panel-context";
 
 const tabs = [
-  { label: "로랩스", href: "/chat", match: (p: string) => !p.startsWith("/store") && !p.startsWith("/onboarding") },
+  { label: "로랩스", href: "/", match: (p: string) => !p.startsWith("/store") && !p.startsWith("/onboarding") },
   { label: "스토어", href: "/store", match: (p: string) => p.startsWith("/store") },
 ];
 

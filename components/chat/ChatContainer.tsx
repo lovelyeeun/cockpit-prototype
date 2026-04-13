@@ -52,15 +52,17 @@ const PAYMENT_LABELS: Record<string, string> = {
 
 interface ChatContainerProps {
   initialChatId?: string | null;
+  isNew?: boolean;
+  initialQuery?: string | null;
 }
 
-export default function ChatContainer({ initialChatId }: ChatContainerProps) {
+export default function ChatContainer({ initialChatId, isNew, initialQuery }: ChatContainerProps) {
   const selectedChat = initialChatId
     ? chats.find((c) => c.id === initialChatId)
     : chats.find((c) => c.id === "chat-002");
   const initialChat = selectedChat ?? chats[0];
 
-  const [messages, setMessages] = useState<ChatMessage[]>(initialChat.messages);
+  const [messages, setMessages] = useState<ChatMessage[]>(isNew ? [] : initialChat.messages);
   const [isTyping, setIsTyping] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
 
@@ -315,6 +317,15 @@ export default function ChatContainer({ initialChatId }: ChatContainerProps) {
       setIsTyping(false);
     }, 800 + Math.random() * 1000);
   }, [addMsg]);
+
+  /* ── Auto-send initial query (from start screen) ── */
+  const autoSentRef = useRef(false);
+  useEffect(() => {
+    if (isNew && initialQuery && !autoSentRef.current) {
+      autoSentRef.current = true;
+      handleSend(initialQuery);
+    }
+  }, [isNew, initialQuery, handleSend]);
 
   /* ─── Render ─── */
 

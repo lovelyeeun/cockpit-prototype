@@ -9,12 +9,14 @@ function ChatContent() {
   const searchParams = useSearchParams();
   const chatType = searchParams.get("type");
   const chatId = searchParams.get("id");
+  const isNew = searchParams.get("new") === "1";
+  const query = searchParams.get("q");
 
   if (chatType === "onboarding") {
     return <OnboardingChat />;
   }
 
-  return <ChatContainer initialChatId={chatId} />;
+  return <ChatContainer initialChatId={chatId} isNew={isNew} initialQuery={query} />;
 }
 
 export default function ChatPage() {

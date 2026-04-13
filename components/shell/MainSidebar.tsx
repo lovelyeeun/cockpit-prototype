@@ -89,7 +89,7 @@ export default function MainSidebar() {
         }}
       >
         {/* New chat */}
-        <CollapsedIcon href="/chat" icon={MessageSquarePlus} label="새 채팅" active={isActive("/chat", pathname)} highlight />
+        <CollapsedIcon href="/" icon={MessageSquarePlus} label="새 채팅" active={pathname === "/"} highlight />
 
         <div className="h-3" />
 
@@ -140,13 +140,13 @@ export default function MainSidebar() {
       {/* ── New chat button (border style) ── */}
       <div className="px-3 pt-4 pb-2">
         <Link
-          href="/chat"
+          href="/"
           className="flex items-center gap-2.5 w-full px-3.5 py-[9px] rounded-[10px] text-[14px] font-medium cursor-pointer transition-all hover:border-[#ccc] hover:bg-[#f8f8f8]"
           style={{
             letterSpacing: "0.14px",
             border: "1px solid #e5e5e5",
-            color: isActive("/chat", pathname) ? "#000" : "#333",
-            backgroundColor: isActive("/chat", pathname) ? "#f5f5f5" : "#fff",
+            color: pathname === "/" ? "#000" : "#333",
+            backgroundColor: pathname === "/" ? "#f5f5f5" : "#fff",
           }}
         >
           <MessageSquarePlus size={16} strokeWidth={1.5} />
