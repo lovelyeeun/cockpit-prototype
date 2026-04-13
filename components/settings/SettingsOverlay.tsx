@@ -7,7 +7,8 @@ import PersonalGeneral from "./panels/PersonalGeneral";
 import PersonalPlan from "./panels/PersonalPlan";
 import PersonalConnectors from "./panels/PersonalConnectors";
 import SettingsAIChat from "./panels/SettingsAIChat";
-import SettingsDashboard from "./panels/SettingsDashboard";
+import CompanyInfoPanel from "./panels/CompanyInfoPanel";
+import AccountingRulesPanel from "./panels/AccountingRulesPanel";
 import ProductsManagement from "./panels/ProductsManagement";
 import AppsManagement from "./panels/AppsManagement";
 import NotificationsSettings from "./panels/NotificationsSettings";
@@ -22,7 +23,8 @@ export default function SettingsOverlay() {
     "personal-plan": <PersonalPlan />,
     "personal-connectors": <PersonalConnectors />,
     "ai-settings": <SettingsAIChat />,
-    "settings-dashboard": <SettingsDashboard />,
+    "company-info": <CompanyInfoPanel />,
+    "accounting-rules": <AccountingRulesPanel />,
     "products": <ProductsManagement />,
     "apps": <AppsManagement />,
     "notifications": <NotificationsSettings />,

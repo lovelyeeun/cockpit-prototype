@@ -7,7 +7,8 @@ export type SettingsSection =
   | "personal-plan"
   | "personal-connectors"
   | "ai-settings"
-  | "settings-dashboard"
+  | "company-info"
+  | "accounting-rules"
   | "products"
   | "apps"
   | "notifications";

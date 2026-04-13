@@ -145,7 +145,7 @@ export default function SettingsDashboard() {
 
         {/* ── 결제수단 ── */}
         <DashCard icon={CreditCard} title="결제수단" aiPrompt="법인카드를 등록하고 싶어요">
-          {paymentMethods.map((m) => (
+          {paymentMethods.filter((m) => m.type === "card").map((m) => (
             <div key={m.id} className="flex items-center gap-2 text-[13px]">
               <span className="font-medium">{m.alias}</span>
               <span className="text-[#777]">{m.issuer} {m.number}</span>
